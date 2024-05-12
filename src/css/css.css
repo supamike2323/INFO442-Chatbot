@@ -1,55 +1,84 @@
+/* Header Container */
 .headerContainer {
-    background-color: #123456;
-    color: white;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .title {
-    margin: 0;
-    font-size: 1.5rem;
-  }
-  
-  @keyframes pulseAnimation {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
-  }
-  
-  .chatToggle {
-    background: #ff7800;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    animation: pulseAnimation 2s infinite;
-  }
-  
-  .chatToggle:hover {
-    background: #ff9500;
-    animation: none;
-  }
-  
-  .appContainer {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
+  background-color: #123456;  /* Dark blue background */
+  color: white;               /* White text for contrast */
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  .chatbotContainer {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 900px;
-    height: 550px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    z-index: 1000;
-  }
+/* Title Styling */
+.title {
+  margin: 0;
+  font-size: 1.5rem;  /* Larger font size */
+}
+
+/* Button Styling for Navigation */
+.button {
+  background-color: #007bff;  /* Primary blue */
+  color: white;               /* White text */
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  text-decoration: none;      /* Remove underline from links */
+  transition: background-color 0.3s, transform 0.2s;  /* Smooth transition for hover effects */
+  margin-right: 10px;  /* Right margin for spacing between buttons */
+}
+
+.button:last-child {
+  margin-right: 0;  /* Remove margin for the last button to maintain layout */
+}
+
+.button:hover {
+  background-color: #0056b3;  /* Darker blue on hover */
+  transform: translateY(-2px);  /* Slight raise effect */
+  cursor: pointer;
+}
+
+
+/* Animation for Chat Toggle Button */
+@keyframes pulseAnimation {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.chatToggle {
+  background: #ff7800;  /* Bright orange */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  animation: pulseAnimation 2s infinite;
+}
+
+.chatToggle:hover {
+  background: #ff9500;  /* Lighter orange on hover */
+  animation: none;
+}
+
+/* App Container */
+.appContainer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Chatbot Container */
+.chatbotContainer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 900px;
+  height: 550px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+}
