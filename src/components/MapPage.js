@@ -23,8 +23,6 @@ const MapPage = () => {
   }, []);
 
   const onLoad = useCallback((map) => {
-    const bounds = new window.google.maps.LatLngBounds();
-    map.fitBounds(bounds);
     setMap(map);
   }, []);
 
@@ -87,13 +85,15 @@ const MapPage = () => {
   return (
     <>
       <h2 className="mapTitle">Google API Map for Searching Available Pet Clinics Near You</h2>
-      <p className="mapDescription">Enter your zip code or address in the search box below to find pet clinics near you.</p>
+      <p className="mapDescription">
+        Enter your <strong><u>zip code or address</u></strong> in <strong><u>the search box below</u></strong> to find pet clinics near you.
+      </p>
       <LoadScript
         googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY}
         libraries={libraries}
       >
         <GoogleMap
-          mapContainerStyle={{ width: '100%', height: '500px' }}
+          mapContainerClassName="mapContainer"
           center={center}
           zoom={10}
           onLoad={onLoad}
