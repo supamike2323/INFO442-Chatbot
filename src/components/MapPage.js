@@ -73,13 +73,19 @@ const MapPage = () => {
         const newMarkers = results.map(place => ({
           lat: place.geometry.location.lat(),
           lng: place.geometry.location.lng(),
-          name: place.name
+          name: place.name,
+          photos: place.photos || [],
+          place_id: place.place_id
         }));
         setMarkers(newMarkers);
       } else {
         alert("No pet hospitals found near this location.");
       }
     });
+  };
+
+  const getGoogleMapsUrl = (placeId) => {
+    return `https://www.google.com/maps/place/?q=place_id:${placeId}`;
   };
 
   return (
@@ -89,8 +95,9 @@ const MapPage = () => {
         Enter your <strong><u>zip code or address</u></strong> in <strong><u>the search box below</u></strong> to find pet clinics near you.
       </p>
       <LoadScript
-        googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY}
+        googleMapsApiKey={"AIzaSyDqwuHkEqBr5LnJiKrmd_ATYmXnph-LeX0"}
         libraries={libraries}
+        language="en"
       >
         <GoogleMap
           mapContainerClassName="mapContainer"
@@ -115,7 +122,17 @@ const MapPage = () => {
             >
               {selected === marker ? (
                 <InfoWindow onCloseClick={() => setSelected(null)}>
-                  <div>{marker.name}</div>
+                  <div className="infoWindow">
+                    <h3>{marker.name}</h3>
+                    {marker.photos.length > 0 && (
+                      <a href={getGoogleMapsUrl(marker.place_id)} target="_blank" rel="noopener noreferrer">
+                        <img 
+                          src={marker.photos[0].getUrl({ maxWidth: 400, maxHeight: 300 })} 
+                          alt={`${marker.name} photo`} 
+                        />
+                      </a>
+                    )}
+                  </div>
                 </InfoWindow>
               ) : null}
             </Marker>

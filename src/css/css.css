@@ -161,7 +161,15 @@ nav {
   border-radius: 5px;
 }
 
+.infoWindow {
+  max-width: 400px;
+}
 
+.infoWindow img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
 
 /* About Us Styles */
 .aboutUsSection {

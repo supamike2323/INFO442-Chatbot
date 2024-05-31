@@ -5,7 +5,7 @@ import '../css/css.css';
 const Header = () => (
   <aside className="headerContainer">
     <img src={`${process.env.PUBLIC_URL}/logo.png`} alt="Logo" className="logo" />
-    <h1 className="title">INFO 442 Pet Diagnosis Adviser Tool</h1>
+    <h1 className="title">PETPAL: Pet Symptoms Advising Chatbot</h1>
     <nav>
       <Link to="/" className="button">Chatbot Page</Link>
       <Link to="/map" className="button">Map Page</Link>
