@@ -30,8 +30,8 @@ const Header = () => {
       <nav>
         <Link to="/" className="button">Chatbot Page</Link>
         <Link to="/map" className="button">Map Page</Link>
-        <Link to="/about" className="button">About Us</Link>
         <Link to="/forum" className="button">Forum</Link>
+        <Link to="/about" className="button">About Us</Link>
         {user ? (
           <button onClick={handleLogout} className="button">Logout</button>
         ) : (
