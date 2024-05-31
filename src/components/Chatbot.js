@@ -13,9 +13,9 @@ const Chatbot = () => {
             srcdoc="<body><script src='https://cdn.botpress.cloud/webchat/v1/inject.js'></script>
             <script>
               window.botpressWebChat.init({
-                  'composerPlaceholder': 'Chat with PetPals',
+                  'composerPlaceholder': 'Chat with PetPal',
                   'botConversationDescription': 'PetPals your new go-to for pet care...',
-                  'botName': 'PetPals',
+                  'botName': 'PetPal',
                   'botId': 'dfb709ab-173b-4fc1-a012-17ec7d590405',
                   'hostUrl': 'https://cdn.botpress.cloud/webchat/v1',
                   'messagingUrl': 'https://messaging.botpress.cloud',
