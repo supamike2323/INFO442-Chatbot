@@ -241,3 +241,231 @@ nav {
     font-size: 2em;
   }
 }
+
+/* Authentication Styles */
+.authContainer {
+  margin: 50px auto;
+  padding: 20px;
+  max-width: 400px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.authContainer h1 {
+  margin-bottom: 20px;
+}
+
+.authContainer input {
+  display: block;
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 10px auto;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.authContainer button {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 10px auto;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.authContainer button:hover {
+  background-color: #45a049;
+}
+
+.authContainer p {
+  margin-top: 20px;
+}
+
+
+/* src/css/css.css */
+/* Forum Styles */
+.forumContainer {
+  margin-left: 250px;
+  padding: 20px;
+}
+
+.forumInput {
+  margin-bottom: 20px;
+}
+
+.forumInput input {
+  margin-right: 10px;
+  padding: 10px;
+  width: calc(100% - 40px);
+}
+
+.forumInput button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.forumInput button:hover {
+  background-color: #45a049;
+}
+
+.forumFilter {
+  margin-bottom: 20px;
+}
+
+.forumFilter input {
+  padding: 10px;
+  width: calc(100% - 40px);
+}
+
+.forumPosts {
+  margin-top: 20px;
+}
+
+.forumPost {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+/* src/css/css.css */
+/* Forum Styles */
+.forumContainer {
+  margin-left: 250px;
+  padding: 20px;
+  max-width: 800px;
+}
+
+.forumInput, .forumFilter, .forumSearch {
+  margin-bottom: 20px;
+}
+
+.forumInput .inputField, .forumFilter .inputField, .forumSearch .inputField {
+  margin-right: 10px;
+  padding: 10px;
+  width: calc(100% - 20px); /* Adjust width to be shorter */
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.forumInput .button, .forumSearch .button, .forumFilter .button, .deleteButton {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.forumInput .button:hover, .forumSearch .button:hover, .forumFilter .button:hover, .deleteButton:hover {
+  background-color: #45a049;
+}
+
+.forumPosts {
+  margin-top: 20px;
+}
+
+.forumPost {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.forumPost:hover {
+  background-color: #f9f9f9;
+}
+
+.forumPost a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.forumPost a:hover {
+  text-decoration: underline;
+}
+
+.forumPost p {
+  margin: 5px 0;
+}
+
+.forumContainer h1, .forumFilter h2, .forumSearch h2, .forumPosts h2 {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .forumContainer {
+    margin-left: 0;
+    padding: 10px;
+  }
+
+  .forumInput .inputField, .forumFilter .inputField, .forumSearch .inputField {
+    width: calc(100% - 20px);
+  }
+
+  .forumPost {
+    padding: 10px;
+  }
+}
+
+/* Post Detail Styles */
+.postDetailContainer {
+  margin-left: 250px;
+  padding: 20px;
+  max-width: 800px;
+}
+
+.postDetailContainer h2 {
+  margin-bottom: 20px;
+}
+
+.postDetailContainer p {
+  margin-bottom: 10px;
+}
+
+.replies {
+  margin-top: 20px;
+  padding-left: 20px;
+  border-left: 2px solid #ddd;
+}
+
+.reply {
+  margin-bottom: 10px;
+}
+
+.replyInput {
+  margin-top: 20px;
+}
+
+.replyInput input {
+  margin-right: 10px;
+  padding: 10px;
+  width: calc(100% - 40px); /* Adjust width to be shorter */
+}
+
+.replyInput button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.replyInput button:hover {
+  background-color: #45a049;
+}
